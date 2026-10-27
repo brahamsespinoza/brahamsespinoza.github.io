@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · Alertas personales</title>
+<meta name="description" content="Política de privacidad de Alertas personales, una aplicación de uso personal que usa la API de Gmail solo para enviar notificaciones automáticas al correo de su propio autor.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f7f9; --surface:#ffffff; --ink:#14202e; --muted:#5a6878; --line:#e1e5ea;
+    --navy:#0f2338; --navy-2:#173452; --accent:#e07b1f; --accent-soft:#fdf1e6;
+    --radius:14px; --shadow:0 1px 2px rgba(15,35,56,.06),0 8px 24px rgba(15,35,56,.06);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px}
+  a{color:inherit}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
+  .kicker{color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;margin:0 0 6px}
+
+  /* Navegación */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(15,35,56,.96);backdrop-filter:blur(8px);color:#fff}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px}
+  .brand{font-weight:700;text-decoration:none;letter-spacing:.02em}
+  .brand span{color:var(--accent)}
+  .nav a.volver{text-decoration:none;font-size:.92rem;opacity:.85}
+  .nav a.volver:hover{opacity:1;color:var(--accent)}
+
+  /* Portada */
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:64px 0 72px}
+  .hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);line-height:1.15;margin:0 0 12px;letter-spacing:-.02em}
+  .hero .sub{color:#c6d2df;margin:0;max-width:620px}
+  .hero .fecha{display:inline-block;margin-top:20px;font-size:.85rem;color:#ffd3a8}
+
+  /* Contenido */
+  main{padding:48px 0 72px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);margin-bottom:20px}
+  .card h2{font-size:1.15rem;margin:0 0 10px;display:flex;gap:10px;align-items:center}
+  .card h2::before{content:"";flex:0 0 10px;height:10px;border-radius:3px;background:var(--accent)}
+  .card p{margin:0 0 12px;color:#2b3949}
+  .card p:last-child{margin:0}
+  .card ul{margin:0;padding-left:18px;color:#2b3949}
+  .card li{margin-bottom:6px}
+  .resumen{background:var(--accent-soft);border-color:#f6d7b8}
+  .resumen p{color:#5c3208}
+  code{font-size:.88em;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+  footer{background:#0b1a2a;color:#8fa1b4;text-align:center;font-size:.85rem;padding:22px 0}
+
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    .hero{padding:48px 0 56px}
+    .card{padding:20px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Brahams <span>Espinoza</span></a>
+    <a class="volver" href="index.html">← Volver al portafolio</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Alertas personales</p>
+    <h1>Política de privacidad</h1>
+    <p class="sub">Alertas personales es una aplicación de uso personal. Esta página explica qué datos usa y para qué.</p>
+    <span class="fecha">Última actualización: 27 de octubre de 2026</span>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <div class="card resumen">
+      <p><strong>En resumen:</strong> la aplicación la uso solo yo. Usa la API de Gmail únicamente para enviar notificaciones automáticas a mi propio correo. No lee mi bandeja de entrada y no almacena ni comparte datos con terceros.</p>
+    </div>
+
+    <div class="card">
+      <h2>Qué es la aplicación</h2>
+      <p>Alertas personales es un programa que se ejecuta en mi computadora personal y me envía notificaciones automáticas por correo. No es un servicio abierto al público ni tiene otros usuarios.</p>
+    </div>
+
+    <div class="card">
+      <h2>Uso de la API de Gmail</h2>
+      <ul>
+        <li>Solo solicita el permiso <code>gmail.send</code> (enviar correo en mi nombre).</li>
+        <li>Se usa únicamente para enviar notificaciones desde mi cuenta de Gmail a mi propio correo.</li>
+        <li>No lee, busca, modifica ni elimina correos, y no accede a contactos, calendario ni a ningún otro dato de la cuenta de Google.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Datos que se guardan</h2>
+      <ul>
+        <li><strong>Permiso de acceso (token de Google):</strong> se guarda solo en mi computadora, en una carpeta privada, y sirve únicamente para enviar los correos.</li>
+        <li><strong>Registro de notificaciones:</strong> un registro local de las notificaciones ya enviadas, para no repetir avisos.</li>
+        <li>No se recopilan datos de otras personas ni se usan cookies, analíticas o publicidad.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Terceros</h2>
+      <p>Los datos no se venden, no se comparten y no se transfieren a terceros, ni se usan para publicidad ni para entrenar modelos de inteligencia artificial. El uso de la información recibida de las API de Google cumple la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios de API de Google</a>, incluidos sus requisitos de uso limitado.</p>
+    </div>
+
+    <div class="card">
+      <h2>Revocar el acceso</h2>
+      <p>El permiso puede revocarse en cualquier momento desde <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>. Al hacerlo, la aplicación deja de poder enviar correos y el token guardado deja de funcionar.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contacto</h2>
+      <p>Responsable: Brahams Lucio Espinoza Tabraj · <a href="mailto:brahams.espinozat@gmail.com">brahams.espinozat@gmail.com</a></p>
+    </div>
+  </div>
+</main>
+
+<footer>© <span id="anio"></span> Brahams Lucio Espinoza Tabraj · Ingeniero Mecánico · Lima, Perú</footer>
+
+<script>
+  document.getElementById('anio').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

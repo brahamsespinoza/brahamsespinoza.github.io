@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brahams Espinoza Tabraj · Ingeniero Mecánico</title>
+<meta name="description" content="Ingeniero Mecánico colegiado (CIP N° 373607) especializado en equipos dinámicos y gestión de mantenimiento. Supervisión de izajes críticos y planeamiento de mantenimiento de maquinaria pesada.">
+<meta property="og:title" content="Brahams Espinoza Tabraj · Ingeniero Mecánico">
+<meta property="og:description" content="Equipos dinámicos, izajes críticos y gestión de mantenimiento en minería y energía.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="fotos/perfil.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f7f9; --surface:#ffffff; --ink:#14202e; --muted:#5a6878; --line:#e1e5ea;
+    --navy:#0f2338; --navy-2:#173452; --accent:#e07b1f; --accent-soft:#fdf1e6;
+    --radius:14px; --shadow:0 1px 2px rgba(15,35,56,.06),0 8px 24px rgba(15,35,56,.06);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  section{padding:80px 0}
+  h2{font-size:clamp(1.6rem,3vw,2rem);margin:0 0 8px;letter-spacing:-.01em}
+  .kicker{color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;margin:0 0 6px}
+  .lead{color:var(--muted);max-width:680px;margin:0 0 36px}
+
+  /* Navegación */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(15,35,56,.96);backdrop-filter:blur(8px);color:#fff}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-weight:700;text-decoration:none;letter-spacing:.02em}
+  .brand span{color:var(--accent)}
+  .nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0}
+  .nav ul a{text-decoration:none;font-size:.92rem;opacity:.85}
+  .nav ul a:hover{opacity:1;color:var(--accent)}
+  .menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px}
+
+  /* Portada */
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:88px 0 96px}
+  .hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.12;margin:0 0 14px;letter-spacing:-.02em}
+  .hero .titular{font-size:clamp(1.1rem,2.2vw,1.35rem);color:#ffd3a8;font-weight:500;margin:0 0 14px}
+  .hero .sub{color:#c6d2df;margin:0 0 30px;max-width:560px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+  .foto-perfil{justify-self:center;width:min(320px,80vw);aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid rgba(255,255,255,.12);background:#24425f;display:grid;place-items:center;position:relative}
+  .foto-perfil img{width:100%;height:100%;object-fit:cover}
+  .foto-perfil .iniciales{font-size:4rem;font-weight:700;color:#8fa6bd}
+  .hero .wrap + .wrap{display:block}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:18px}
+  .stat b{display:block;font-size:1.7rem;color:#fff}
+  .stat span{font-size:.85rem;color:#b9c7d6}
+
+  /* Sobre mí */
+  .about{display:grid;grid-template-columns:1.5fr 1fr;gap:40px}
+  .about p{margin:0 0 16px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .datos{list-style:none;margin:0;padding:0}
+  .datos li{padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .datos li:last-child{border:0}
+  .datos small{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+
+  /* Línea de tiempo */
+  .alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .timeline{position:relative;margin:0;padding:0 0 0 28px;list-style:none}
+  .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .timeline>li{position:relative;padding-bottom:40px}
+  .timeline>li:last-child{padding-bottom:0}
+  .timeline>li::before{content:"";position:absolute;left:-28px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+  .periodo{font-size:.85rem;font-weight:600;color:var(--accent)}
+  .timeline h3{margin:2px 0 2px;font-size:1.2rem}
+  .empresa{color:var(--muted);margin:0 0 10px;font-weight:500}
+  .timeline ul{margin:0;padding-left:18px;color:#2b3949}
+  .timeline ul li{margin-bottom:6px}
+  .extra{margin-top:48px}
+  .extra h3{font-size:1.05rem;margin:0 0 12px}
+  .extra ul{margin:0;padding-left:18px;color:#2b3949}
+
+  /* Proyectos */
+  .proyecto{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin-bottom:28px}
+  .proyecto-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:baseline}
+  .proyecto h3{margin:0;font-size:1.3rem}
+  .badge{background:var(--accent-soft);color:#a3530c;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:999px}
+  .proyecto .rol{color:var(--muted);margin:4px 0 12px;font-weight:500}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px;padding:0;list-style:none}
+  .chips li{font-size:.8rem;border:1px solid var(--line);padding:4px 10px;border-radius:8px;background:var(--bg)}
+  .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .galeria figure{margin:0;border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#e9edf1;position:relative;cursor:zoom-in}
+  .galeria img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+  .galeria figure:hover img{transform:scale(1.04)}
+  .otros{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+  .otros .proyecto{margin:0}
+  .otros .galeria{grid-template-columns:repeat(2,1fr)}
+
+  /* Competencias */
+  .grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .comp h3{margin:0 0 12px;font-size:1.05rem;display:flex;gap:10px;align-items:center}
+  .comp h3::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--accent)}
+  .comp ul{margin:0;padding-left:18px;color:#2b3949}
+  .comp li{margin-bottom:4px}
+
+  /* Certificaciones */
+  .certs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .cert{display:flex;gap:16px}
+  .cert .ico{flex:0 0 44px;height:44px;border-radius:10px;background:var(--accent-soft);color:#a3530c;display:grid;place-items:center;font-weight:700}
+  .cert h3{margin:0 0 2px;font-size:1rem}
+  .cert p{margin:0;color:var(--muted);font-size:.9rem}
+  .cert .estado{display:inline-block;margin-top:6px;font-size:.75rem;font-weight:600;color:#1d7a46;background:#e6f5ec;padding:2px 8px;border-radius:6px}
+  .cert .estado.curso{color:#8a5a00;background:#fff4dc}
+
+  /* Contacto */
+  .contacto{background:var(--navy);color:#fff;text-align:center}
+  .contacto .lead{color:#c6d2df;margin:0 auto 32px}
+  .contacto .btns{justify-content:center}
+  footer{background:#0b1a2a;color:#8fa1b4;text-align:center;font-size:.85rem;padding:22px 0}
+
+  /* Visor de fotos */
+  .visor{position:fixed;inset:0;background:rgba(5,12,20,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;flex-direction:column}
+  .visor.abierto{display:flex}
+  .visor img{max-height:80vh;border-radius:8px}
+  .visor p{color:#dbe3ec;margin:14px 0 0;text-align:center}
+  .visor button{position:absolute;background:rgba(255,255,255,.1);border:0;color:#fff;font-size:1.8rem;width:48px;height:48px;border-radius:50%;cursor:pointer}
+  .visor .cerrar{top:16px;right:16px}
+  .visor .ant{left:16px;top:50%}
+  .visor .sig{right:16px;top:50%}
+
+  /* Celular */
+  @media (max-width:860px){
+    section{padding:60px 0}
+    .menu-btn{display:block}
+    .nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;padding:8px 20px 16px}
+    .nav ul.abierto{display:flex}
+    .nav ul a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .hero{padding:56px 0 64px}
+    .hero .wrap{grid-template-columns:1fr;gap:32px}
+    .foto-perfil{order:-1;width:200px}
+    .stats{grid-template-columns:repeat(2,1fr);margin-top:40px}
+    .about,.grid-4,.certs,.otros{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    .galeria,.otros .galeria{grid-template-columns:1fr 1fr}
+    .proyecto{padding:20px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Brahams <span>Espinoza</span></a>
+    <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#competencias">Competencias</a></li>
+      <li><a href="#certificaciones">Certificaciones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Ingeniero Mecánico · CIP N° 373607</p>
+      <h1>Brahams Lucio Espinoza Tabraj</h1>
+      <p class="titular">Ingeniero mecánico especializado en equipos dinámicos y gestión de mantenimiento</p>
+      <p class="sub">Supervisión de izajes críticos y montaje con equipos de hasta 600 TN, y planeamiento y control del mantenimiento de maquinaria pesada bajo el enfoque ISO 55001, en los sectores minero, energético e industrial.</p>
+      <div class="btns">
+        <a class="btn primary" href="#contacto">Contactar</a>
+        <a class="btn ghost" href="#proyectos">Ver proyectos</a>
+      </div>
+    </div>
+    <div class="foto-perfil">
+      <span class="iniciales">BE</span>
+      <img src="fotos/perfil.jpg" alt="Foto de Brahams Espinoza Tabraj" style="position:absolute;inset:0" onerror="this.remove()">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>600 TN</b><span>Capacidad máxima de grúa supervisada</span></div>
+      <div class="stat"><b>60</b><span>Grúas torre en la flota planificada</span></div>
+      <div class="stat"><b>&gt;95 %</b><span>Cumplimiento del programa preventivo</span></div>
+      <div class="stat"><b>~25 %</b><span>Menos paradas no programadas</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
+  <div class="wrap">
+    <p class="kicker">Sobre mí</p>
+    <h2>Rigor técnico en campo, gestión basada en datos</h2>
+    <div class="about" style="margin-top:28px">
+      <div>
+        <p>Soy Ingeniero Mecánico colegiado y habilitado (CIP N° 373607), egresado de la Universidad Nacional del Callao y primer puesto del quinto superior de mi promoción.</p>
+        <p>Mi trabajo combina tres frentes: la <strong>supervisión de izajes críticos y montaje</strong> en operaciones como Antamina, Hudbay Constancia, Tía María y KALLPA; el <strong>planeamiento y control del mantenimiento</strong> de una flota de 60 grúas torre con SAP PM y gestión de activos ISO 55001; y la <strong>gestión basada en datos</strong>, con formación en Python, SQL Server y Power BI para el seguimiento de indicadores.</p>
+        <p>Me caracterizo por el liderazgo en campo, el compromiso con la seguridad y la disponibilidad de los equipos, y una fuerte orientación al aprendizaje autónomo y la mejora continua.</p>
+      </div>
+      <div class="card">
+        <ul class="datos">
+          <li><small>Ubicación</small>Lima, Perú</li>
+          <li><small>Disponibilidad</small>Disponibilidad inmediata – régimen minero o presencial en Lima</li>
+          <li><small>Formación</small>Ingeniería Mecánica — UNAC (2025)</li>
+          <li><small>Idiomas</small>Español (nativo) · Inglés (intermedio)</li>
+          <li><small>Sectores</small>Minería · Energía · Construcción</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section id="experiencia" class="alt">
+  <div class="wrap">
+    <p class="kicker">Trayectoria</p>
+    <h2>Experiencia profesional</h2>
+    <p class="lead">Grúas ETAC Perú, desde las prácticas hasta la supervisión de izajes en proyectos mineros y energéticos.</p>
+    <ol class="timeline">
+      <li>
+        <span class="periodo">2025 – Actualidad</span>
+        <h3>Ingeniero Supervisor de Izajes</h3>
+        <p class="empresa">Grúas ETAC Perú</p>
+        <ul>
+          <li>Lidero y superviso en campo maniobras de izaje críticas y generales en proyectos mineros y energéticos de gran envergadura.</li>
+          <li>Dirijo cuadrillas de hasta 10 personas (riggers, operadores y montajistas) con objetivo de cero incidentes.</li>
+          <li>Supervisión de izajes con grúas hidráulicas GMK5250, GMK6300 y GMK4080 y camión grúa FASSI F660RA.</li>
+          <li>Elaboración de memorias de cálculo y descriptivas, procedimientos de montaje y desmontaje, Rigging Plans e informes técnicos.</li>
+          <li>Supervisión del pre-armado y montaje de grúas torre para constructoras en Lima (Besco, Vivagym, Miranda y COSAPI).</li>
+          <li>Informes de gestión semanales y mensuales que sustentan la valorización ante el cliente.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="periodo">2023 – 2025</span>
+        <h3>Ingeniero de Control de Procesos – Planeamiento y Mantenimiento de Flota</h3>
+        <p class="empresa">Grúas ETAC Perú</p>
+        <ul>
+          <li>Planeamiento, control y seguimiento del mantenimiento preventivo, predictivo y correctivo de una flota nacional de 60 grúas torre, con un cumplimiento del programa superior al 95 %.</li>
+          <li>Gestión del ciclo completo de órdenes de trabajo en SAP PM, con trazabilidad del historial de cada equipo.</li>
+          <li>Seguimiento de indicadores (disponibilidad mecánica, MTBF, MTTR, costos), sosteniendo una disponibilidad mecánica sobre el 85 %.</li>
+          <li>Análisis de fallas recurrentes y matriz de repuestos críticos: reducción de alrededor del 25 % en paradas no programadas.</li>
+          <li>Planes de disponibilidad bajo el enfoque de gestión de activos ISO 55001.</li>
+          <li>Evaluación, diseño y aprobación de planes de izaje pesados y complejos.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="periodo">2022 – 2023</span>
+        <h3>Practicante de Ingeniería – Mantenimiento</h3>
+        <p class="empresa">Grúas ETAC Perú</p>
+        <ul>
+          <li>Desarrollo de la matriz de repuestos críticos de la flota nacional de grúas torre.</li>
+          <li>Matriz de control de mantenimiento de subcomponentes críticos (motores, variadores, tarjetas y reductores).</li>
+          <li>Apertura, programación y cierre de órdenes de trabajo en SAP PM.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <div class="extra card">
+      <h3>Actividades complementarias</h3>
+      <ul>
+        <li><strong>ASME UNAC – Member &amp; Chair (2018 – 2021):</strong> dirección de la sección estudiantil; membresía +50 %, plan estratégico anual y webinars técnicos.</li>
+        <li><strong>ASME Perú (2020):</strong> ponente sobre recipientes a presión (ASME Sec. VIII, Div. 1), con hasta 500 asistentes.</li>
+        <li><strong>CONEIMERA Cusco (2019):</strong> expositor de investigación en propulsión magnetohidrodinámica; minicurso de gestión de maquinaria minera bajo ISO 55001.</li>
+        <li><strong>Voluntariado Yachaywasi – Yaku Asesor (2021 – 2022):</strong> apoyo académico a estudiantes de comunidades rurales.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="wrap">
+    <p class="kicker">Proyectos</p>
+    <h2>Proyectos destacados</h2>
+    <p class="lead">Operaciones de izaje y montaje en minería y energía. Toca una foto para ampliarla.</p>
+
+    <article class="proyecto">
+      <div class="proyecto-head">
+        <h3>Antamina – Plataforma de Armado</h3>
+        <span class="badge">2026 · Minería</span>
+      </div>
+      <p class="rol">Supervisor de Izajes · en coordinación con Ferreyros</p>
+      <p>Planificación y control de maniobras en el armado de camiones mineros Caterpillar 798, garantizando secuencias de montaje seguras y la continuidad de la operación.</p>
+      <ul class="chips">
+        <li>GMK5250 · 250 TN</li><li>SAC2500 · 250 TN</li><li>SAC3500 · 350 TN</li><li>Montacargas 35 TN</li><li>Camión grúa 32 TN</li><li>Manlift</li>
+      </ul>
+      <div class="galeria">
+        <figure data-file="antamina-1.jpg"><img src="fotos/antamina-1.jpg" alt="Antamina – camión grúa en el armado de un camión minero CAT 798" loading="lazy"></figure>
+        <figure data-file="antamina-2.jpg"><img src="fotos/antamina-2.jpg" alt="Antamina – maniobra de izaje en tándem en la plataforma de armado" loading="lazy"></figure>
+        <figure data-file="antamina-3.jpg"><img src="fotos/antamina-3.jpg" alt="Antamina – izaje de componente con grúa telescópica" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <article class="proyecto">
+      <div class="proyecto-head">
+        <h3>Minera Constancia – Hudbay</h3>
+        <span class="badge">09/2026 · Minería</span>
+      </div>
+      <p class="rol">Supervisor Operativo de Izajes y Montaje</p>
+      <p>Desmontaje y posterior montaje de la grúa torre TEREX SK575 (32 TN), con grúa auxiliar TEREX AC200-1 en configuración de 69 TN de contrapeso.</p>
+      <ul class="chips">
+        <li>Grúa torre TEREX SK575 · 32 TN</li><li>TEREX AC200-1</li><li>Contrapeso 69 TN</li>
+      </ul>
+      <div class="galeria">
+        <figure data-file="constancia-1.jpg"><img src="fotos/constancia-1.jpg" alt="Brahams Espinoza en campo – Minera Constancia (Hudbay)" loading="lazy"></figure>
+        <figure data-file="constancia-2.jpg"><img src="fotos/constancia-2.jpg" alt="Constancia – desmontaje con grúa auxiliar" loading="lazy"></figure>
+        <figure data-file="constancia-3.jpg"><img src="fotos/constancia-3.jpg" alt="Constancia – grúa torre con la grúa auxiliar TEREX" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <div class="otros">
+      <article class="proyecto">
+        <div class="proyecto-head">
+          <h3>Parada de Planta Mayor – KALLPA</h3>
+          <span class="badge">05/2026 · Energía</span>
+        </div>
+        <p class="rol">Control operativo de izajes · Cambio de eje de turbina</p>
+        <p>Control simultáneo de grúa telescópica de 600 TN y equipos de apoyo; trabajo culminado dentro del cronograma del cliente.</p>
+        <ul class="chips">
+          <li>Telescópica 600 TN</li><li>Grúa 100 TN</li><li>Camión grúa 35 TN</li><li>Plataforma 30 TN</li>
+        </ul>
+        <div class="galeria">
+          <figure data-file="kallpa-1.jpg"><img src="fotos/kallpa-1.jpg" alt="KALLPA – grúa de 600 TN" loading="lazy"></figure>
+          <figure data-file="kallpa-2.jpg"><img src="fotos/kallpa-2.jpg" alt="KALLPA – cambio de eje de turbina" loading="lazy"></figure>
+        </div>
+      </article>
+
+      <article class="proyecto">
+        <div class="proyecto-head">
+          <h3>Proyecto Minero Tía María</h3>
+          <span class="badge">07/07/2026 · Minería</span>
+        </div>
+        <p class="rol">Ingeniería, planificación y montaje de grúas torre</p>
+        <p><strong>Área Seca (chancador primario):</strong> grúa torre de 8 TN con DEMAG de 100 TN; hito cumplido antes de lo programado. <strong>Área Húmeda (celdas de flotación):</strong> grúa torre de 10 TN con DEMAG de 100 TN, dentro del plazo.</p>
+        <ul class="chips">
+          <li>Grúa torre 8 TN</li><li>Grúa torre 10 TN</li><li>DEMAG 100 TN</li>
+        </ul>
+        <div class="galeria">
+          <figure data-file="tia-maria-1.jpg"><img src="fotos/tia-maria-1.jpg" alt="Tía María – montaje de grúa torre con grúa telescópica" loading="lazy"></figure>
+          <figure data-file="tia-maria-2.jpg"><img src="fotos/tia-maria-2.jpg" alt="Tía María – grúa torre y grúa telescópica de apoyo" loading="lazy"></figure>
+        </div>
+      </article>
+    </div>
+
+    <article class="proyecto" style="margin-top:28px">
+      <div class="proyecto-head">
+        <h3>Grúas torre en obras de Lima</h3>
+        <span class="badge">Construcción</span>
+      </div>
+      <p class="rol">Supervisión de pre-armado y montaje</p>
+      <p>Montaje de grúas torre para constructoras como Besco, Vivagym, Miranda y COSAPI.</p>
+      <div class="galeria">
+        <figure data-file="lima-1.jpg"><img src="fotos/lima-1.jpg" alt="Montaje de grúa torre en Lima" loading="lazy"></figure>
+        <figure data-file="lima-2.jpg"><img src="fotos/lima-2.jpg" alt="Izaje nocturno de una sección de grúa torre" loading="lazy"></figure>
+        <figure data-file="lima-3.jpg"><img src="fotos/lima-3.jpg" alt="Grúa torre en obra" loading="lazy"></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- COMPETENCIAS -->
+<section id="competencias" class="alt">
+  <div class="wrap">
+    <p class="kicker">Competencias</p>
+    <h2>Competencias técnicas</h2>
+    <p class="lead">Equipos dinámicos de alto tonelaje, mantenimiento de maquinaria pesada y gestión con datos.</p>
+    <div class="grid-4">
+      <div class="card comp">
+        <h3>Izaje y montaje</h3>
+        <ul>
+          <li>Rigging Plan para izajes críticos</li>
+          <li>Montaje y desmontaje de grúas torre</li>
+          <li>Supervisión de grúas hidráulicas, telescópicas y todo terreno de alto tonelaje</li>
+          <li>Memorias de cálculo y descriptivas · procedimientos de montaje</li>
+          <li>Normativa ASME B30 / P30.1</li>
+        </ul>
+      </div>
+      <div class="card comp">
+        <h3>Planeamiento y control de mantenimiento</h3>
+        <ul>
+          <li>Mantenimiento preventivo, predictivo y correctivo de maquinaria pesada</li>
+          <li>Programación semanal y gestión de backlog</li>
+          <li>Indicadores de disponibilidad y confiabilidad (MTBF, MTTR)</li>
+          <li>Gestión de activos ISO 55001 · repuestos críticos</li>
+          <li>Control de costos · paradas de planta</li>
+        </ul>
+      </div>
+      <div class="card comp">
+        <h3>Gestión, datos y liderazgo</h3>
+        <ul>
+          <li>Reportes de gestión y valorización</li>
+          <li>Dashboards de indicadores en Power BI</li>
+          <li>Análisis de datos con SQL y Python</li>
+          <li>Dirección de equipos multidisciplinarios en campo</li>
+          <li>Coordinación con gerencias, clientes y contratistas · cultura de seguridad</li>
+        </ul>
+      </div>
+      <div class="card comp">
+        <h3>Software</h3>
+        <ul>
+          <li>SAP PM, PP, MM (intermedio)</li>
+          <li>AutoCAD 2D, Autodesk Inventor, SolidWorks (intermedio)</li>
+          <li>MS Project (intermedio) · MS Office (avanzado)</li>
+          <li>Python · SQL Server · Microsoft Power BI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICACIONES -->
+<section id="certificaciones">
+  <div class="wrap">
+    <p class="kicker">Formación</p>
+    <h2>Educación y certificaciones</h2>
+    <p class="lead">Credenciales vigentes y formación continua.</p>
+    <div class="certs">
+      <div class="card cert">
+        <div class="ico">BV</div>
+        <div>
+          <h3>Supervisor de Izaje</h3>
+          <p>Bureau Veritas – Inspectorate Services Perú · Cert. N° 2600902-002 · ASME B30.2, B30.5, B30.9, B30.10, B30.20, B30.22, B30.26 y P30.1</p>
+          <span class="estado">Vigente hasta 08/2028</span>
+        </div>
+      </div>
+      <div class="card cert">
+        <div class="ico">CIP</div>
+        <div>
+          <h3>Ingeniero Mecánico Colegiado</h3>
+          <p>Colegio de Ingenieros del Perú · CIP N° 373607 · Universidad Nacional del Callao (título 2025)</p>
+          <span class="estado">Habilitado</span>
+        </div>
+      </div>
+      <div class="card cert">
+        <div class="ico">WL</div>
+        <div>
+          <h3>Supervisor / Director de Izajes</h3>
+          <p>Worklift Perú · Diploma N° DIP-TRG-25-0065/003 (2025) · ASME B30.3 (grúas torre), B30.5, B30.9, B30.10, B30.22, B30.23, B30.26 y P30.1</p>
+        </div>
+      </div>
+      <div class="card cert">
+        <div class="ico">1°</div>
+        <div>
+          <h3>Primer puesto – Quinto Superior</h3>
+          <p>Ingeniería Mecánica, UNAC · Puesto N° 1 de su promoción</p>
+        </div>
+      </div>
+      <div class="card cert">
+        <div class="ico">WE</div>
+        <div>
+          <h3>Diplomado en Inteligencia y Análisis de Datos</h3>
+          <p>WE Educación Ejecutiva · Módulos aprobados: Python Fundamentals (IBM), Data Analytics, SQL Server for Analytics y Microsoft Power BI (Microsoft)</p>
+          <span class="estado curso">En curso · culmina en enero de 2027</span>
+        </div>
+      </div>
+      <div class="card cert">
+        <div class="ico">+</div>
+        <div>
+          <h3>Otros</h3>
+          <p>S10 Costos y Presupuestos — CEPS UNI · Inglés Intermedio — ICPNA (2023)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+  <div class="wrap">
+    <p class="kicker">Contacto</p>
+    <h2>Conversemos</h2>
+    <p class="lead">Para consultas profesionales, escríbeme por correo o contáctame a través de LinkedIn.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:brahams.espinozat@gmail.com">✉ brahams.espinozat@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/bramespt" target="_blank" rel="noopener">in · LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="anio"></span> Brahams Lucio Espinoza Tabraj · Ingeniero Mecánico · Lima, Perú</footer>
+
+<div class="visor" role="dialog" aria-modal="true" aria-label="Visor de fotos">
+  <button class="cerrar" aria-label="Cerrar">×</button>
+  <button class="ant" aria-label="Anterior">‹</button>
+  <img alt="">
+  <p></p>
+  <button class="sig" aria-label="Siguiente">›</button>
+</div>
+
+<script>
+  document.getElementById('anio').textContent = new Date().getFullYear();
+
+  // Menú en celular
+  const btn = document.querySelector('.menu-btn'), menu = document.querySelector('.nav ul');
+  btn.addEventListener('click', () => btn.setAttribute('aria-expanded', menu.classList.toggle('abierto')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('abierto')));
+
+  // Fotos faltantes: se oculta su espacio, y la galería entera si queda vacía
+  document.querySelectorAll('.galeria img').forEach(img => {
+    const fallo = () => {
+      const fig = img.parentNode, gal = fig.parentNode;
+      fig.remove();
+      if (!gal.children.length) gal.remove();
+    };
+    if (img.complete && img.naturalWidth === 0) fallo(); else img.addEventListener('error', fallo);
+  });
+
+  // Visor de fotos
+  const visor = document.querySelector('.visor'), vImg = visor.querySelector('img'), vTxt = visor.querySelector('p');
+  let fotos = [], i = 0;
+  const mostrar = n => { i = (n + fotos.length) % fotos.length; vImg.src = fotos[i].src; vTxt.textContent = fotos[i].alt; };
+  document.querySelector('#proyectos').addEventListener('click', e => {
+    if (e.target.tagName !== 'IMG') return;
+    fotos = [...document.querySelectorAll('.galeria img')];
+    mostrar(fotos.indexOf(e.target)); visor.classList.add('abierto');
+  });
+  const cerrar = () => visor.classList.remove('abierto');
+  visor.querySelector('.cerrar').onclick = cerrar;
+  visor.querySelector('.ant').onclick = () => mostrar(i - 1);
+  visor.querySelector('.sig').onclick = () => mostrar(i + 1);
+  visor.addEventListener('click', e => { if (e.target === visor) cerrar(); });
+  document.addEventListener('keydown', e => {
+    if (!visor.classList.contains('abierto')) return;
+    if (e.key === 'Escape') cerrar();
+    if (e.key === 'ArrowLeft') mostrar(i - 1);
+    if (e.key === 'ArrowRight') mostrar(i + 1);
+  });
+</script>
+</body>
+</html>
